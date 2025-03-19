@@ -35,3 +35,39 @@ El último paso es subir los cambios al igual que en el ejercicio anterior:
 -git commit -m "Modificación index.php"
 -git flow feature finish modificar-index
 -git push origin develop
+
+
+EJERCICIO 4
+
+Hacemos un git status para mostrar el conflicto
+
+Después mergeamos ambas funcionalidades en develop: git merge develop
+
+Luego añadimos el archivo, hacemos el commit y subimos los cambios:
+-git add index.php
+-git commit -m "Conflicto resuelto"
+-git push origin develop
+
+
+EJERCICIO 5
+
+Creamos una nueva funcionalidad: git flow feature start borrar-mi-archivo
+
+Eliminamos el archivo: rm alumnos/rafamedina.php
+
+Hacemos el commit: git commit -m "Arvhivo borrado"
+
+Subimos los cambios: git push origin develop
+
+Y por último vemos la eliminación: git log --oneline
+
+
+EJERCICIO 6
+
+Creamos release: git flow release start v1.0
+
+Después la eliminamos: git flow release finish v1.0
+
+Creamos una rama tag y publicamos la versión:
+-git tag -a v1.0 -m "Versión publicada"
+-git push origin --tags
